@@ -3,7 +3,6 @@ import "./globals.css";
 
 export const metadata: Metadata = {
    title: "Brasil Paralelo",
-   description: "Criado por Fabricio Galdino",
 };
 
 export default function RootLayout({

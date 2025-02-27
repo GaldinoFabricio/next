@@ -19,7 +19,7 @@ export default function FeedPhotos({ photos }: { photos: Photo[] }) {
                         height: "100vh",
                         width: "100vw",
                         objectFit: "cover",
-                        filter: "brightness(0.7)"
+                        filter: "brightness(0.8)"
                      }}
                   />
                </Link>

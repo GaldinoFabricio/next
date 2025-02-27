@@ -6,7 +6,6 @@ import FeedPhotos from "./feed-phots";
 
 export default function Feed({
    photos,
-   user,
 }: {
    photos: Photo[];
    user?: 0 | string;
@@ -36,7 +35,7 @@ export default function Feed({
       if (page === 1) return;
       async function getPagePhotos(page: number) {
          const actionData = await photosGet(
-            { page, total: 6, user: 0 },
+            { page, total: 6 },
             {
                cache: "no-store",
             }
@@ -65,7 +64,7 @@ export default function Feed({
    }, [infinite]);
 
    React.useEffect(() => {
-      const handleKeyDown = (event: any) => {
+      const handleKeyDown = (event: KeyboardEvent) => {
          if (scroll) return;
          if (event.key === "ArrowDown") {
             setScroll(true);
@@ -92,7 +91,7 @@ export default function Feed({
          }
       };
 
-      const handleWheel = (event: any) => {
+      const handleWheel = (event: WheelEvent) => {
          if (scroll) return;
 
          setScroll(true);
